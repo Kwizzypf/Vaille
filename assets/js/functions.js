@@ -1,5 +1,11 @@
-function testt(index)
+function test(index)
 {
+    var cpt = index - 1;
+    $(".modal-title").html(tableVeille[cpt][1]);
+    $("#synthesis").html(tableVeille[cpt][2]);
+    $("#comments").html(tableVeille[cpt][3]);
+    $("#links").html(tableVeille[cpt][4]);
+
    
 }
 
@@ -15,7 +21,7 @@ function getAllVeille()
         // This function (`page`) will get called for each page of records.
     
         records.forEach(function(record) {
-            var tab = [record.get("Id"), record.get("Subject"), record.get("Synthesis"), record.get("Comment")];
+            var tab = [record.get("Id"), record.get("Subject"), record.get("Synthesis"), record.get("Comment"), record.get("Links")];
             tableVeille.push(tab);
         });
     
@@ -32,5 +38,11 @@ function getAllVeille()
 
 function setVeilleInCard()
 {
-    console.log();
+    console.log(tableVeille.length)
+    for( var i = 0; i < tableVeille.length; i++)
+    {
+        var tmp = cardVeille.replace("###titleVeille###", tableVeille[i][1]);
+        tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
+        $("#list").append(tmp);
+    }
 }

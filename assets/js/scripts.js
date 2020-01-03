@@ -1,9 +1,20 @@
 var tableVeille = [];
-var cpt = 0;
+var delayInMilliseconds = 1000; //1 second
+
 
 getAllVeille();
-console.log(tableVeille);
-console.log("taille de ma Table :" + tableVeille.length)
-//setVeilleInCard();
+$(document).ready(function(){
+    
+
+    setTimeout(function() {
+    //your code to be executed after 1 second
+        setVeilleInCard();
+    }, delayInMilliseconds);
+})
+
+
+
+
+
 
 
