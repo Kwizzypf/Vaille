@@ -1,3 +1,4 @@
+/* function qui insère les données dans le modal */
 function test(index)
 {
     var cpt = index - 1;
@@ -5,7 +6,6 @@ function test(index)
     $("#synthesis").html(tableVeille[cpt][2]);
     $("#comments").html(tableVeille[cpt][3]);
     $("#links").html(tableVeille[cpt][4]);
-
    
 }
 
@@ -36,12 +36,13 @@ function getAllVeille()
 
 }
 
+/* function qui remplis les cartes et les affiches*/
 function setVeilleInCard()
 {
-    console.log(tableVeille.length)
     for( var i = 0; i < tableVeille.length; i++)
     {
         var tmp = cardVeille.replace("###titleVeille###", tableVeille[i][1]);
+        tmp = tmp.replace("###id###", tableVeille[i][0]);
         tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
         $("#list").append(tmp);
     }

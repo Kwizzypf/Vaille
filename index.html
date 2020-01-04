@@ -24,12 +24,7 @@
            
     </div>
 
-
-
-    <!-- Button trigger modal
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-    </button> -->
+    <div id="pagination-container"></div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -37,24 +32,26 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title mb-1" id="exampleModalLongTitle">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <h5><u>Synthèse:</u></h5>
-                    <div id="synthesis">
+                    <div id="synthesis" class="mt-1 text-justify">
                         one
                     </div>
+                </div>
+                <div class="modal-body">
                     <h5><u>Commentaires:</u></h5>
-                    <div id="comments">
+                    <div id="comments" class="text-justify">
                         two
                     </div>
                 </div>
                 <div class="modal-body">
                     <h5><u>Sources:</u></h5>
-                    <div id="links">
+                    <div id="links" class="text-justify">
                         three   
                     </div>
                 </div>
@@ -62,7 +59,13 @@
         </div>
     </div>
 
-
+    <div id="loading" class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <h2>Wait the page is loading!</h2>
+            </div>
+        </div>
+    </div>
 
     <footer class="mt-2 text-primary">
         <div class="text-center">
@@ -75,6 +78,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/airtable.browser.js"></script>
     <script src="assets/js/config.js"></script>
+    <script src="assets/js/jquery.simplePagination.js"></script>
     <script src="assets/js/templates.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/scripts.js" defer></script>
