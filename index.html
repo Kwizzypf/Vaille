@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body class="text-primary">
 
     <div class="container text-center text-primary">
         <div class="row">
@@ -20,38 +20,40 @@
         </div>
     </div>
 
+    <div class="pagination-container"></div>
+
     <div id="list">
            
     </div>
 
-    <div id="pagination-container"></div>
+    <div class="pagination-container"></div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+    <div class="modal fade text-dark" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title mb-1" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title mb-1 text-danger" id="exampleModalLongTitle">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h5><u>Synthèse:</u></h5>
-                    <div id="synthesis" class="mt-1 text-justify">
+                    <h5 class="text-danger"><u>Synthèse:</u></h5>
+                    <div id="synthesis" class="mt-1 text-justify text-muted">
                         one
                     </div>
                 </div>
                 <div class="modal-body">
-                    <h5><u>Commentaires:</u></h5>
-                    <div id="comments" class="text-justify">
+                    <h5 class="text-danger"><u>Commentaires:</u></h5>
+                    <div id="comments" class="text-justify text-muted">
                         two
                     </div>
                 </div>
                 <div class="modal-body">
-                    <h5><u>Sources:</u></h5>
-                    <div id="links" class="text-justify">
+                    <h5 class="text-danger"><u>Sources:</u></h5>
+                    <div id="links" class="text-justify text-muted">
                         three   
                     </div>
                 </div>

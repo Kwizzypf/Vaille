@@ -1,5 +1,5 @@
 var cardVeille =
-'<div id="###id###" class="container mt-3 items text-center">'+
+'<div id="###id###" class="container mt-3 items text-center ">'+
     '<div class="row">'+
         '<div class="col-12">'+
             '<div class="card" style="width: 80%">'+
