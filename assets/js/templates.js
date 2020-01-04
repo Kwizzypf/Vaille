@@ -16,3 +16,8 @@ var cardVeille =
         '</div>'+
     '</div>'+
 '</div>';
+
+var lien = 
+'<a href="###lien###" target="_blank">'+
+    '###lien###'+
+'</a><br>';

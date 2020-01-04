@@ -5,8 +5,26 @@ function test(index)
     $(".modal-title").html(tableVeille[cpt][1]);
     $("#synthesis").html(tableVeille[cpt][2]);
     $("#comments").html(tableVeille[cpt][3]);
-    $("#links").html(tableVeille[cpt][4]);
+    var tabLinks = tableVeille[cpt][4].split("\n\n");
+    /*fonction qui va créer plusieur balises a pour générer nos liens de source */
+    var links = setLinkInABalise(tabLinks); 
+    $("#links").html(links);
    
+}
+
+  /*fonction qui va créer plusieur balises a pour générer nos liens de source */
+function setLinkInABalise(tab)
+{
+    var templateFinal = "";
+    for(var i = 0; i < tab.length; i++)
+    {
+        if(tab[i] != "")
+        {
+            var tmp = lien.replace(/###lien###/gi, tab[i]);
+            templateFinal += tmp;
+        }
+    }
+    return templateFinal;
 }
 
 /* function qui récupère toutes les veilles sur AirTable et les stock dans un tableau */
@@ -40,8 +58,7 @@ function getAllVeille()
 /* function qui remplis les cartes et les affiches*/
 function setVeilleInCard()
 {
-    var img = tableVeille[0][5];
-    console.log(img[0].url)
+
     for( var i = 0; i < tableVeille.length; i++)
     {
         var imgUrl = tableVeille[i][5]
