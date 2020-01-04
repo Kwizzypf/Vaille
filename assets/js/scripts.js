@@ -15,7 +15,7 @@ $(document).ready(function(){
         setTimeout(function(){
             var items = $("#list .items");
             var numItems = items.length;
-            var perPage = 3;
+            var perPage = 2;
 
             items.slice(perPage).hide();
 

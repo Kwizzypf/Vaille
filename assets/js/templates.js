@@ -1,9 +1,9 @@
 var cardVeille =
-'<div id="###id###" class="container mt-3 items">'+
+'<div id="###id###" class="container mt-3 items text-center">'+
     '<div class="row">'+
         '<div class="col-12">'+
-            '<div class="card" style="width: 100%">'+
-                '<img class="card-img-top" src="###linkImage###" alt="Card image cap">'+
+            '<div class="card" style="width: 80%">'+
+                '<img class="card-img-top" src="###linkImage###" alt="Card image cap" height="300px">'+
                 '<div class="card-body">'+
                 '<h5 class="card-title">###titleVeille###</h5>'+
                 '</div>'+

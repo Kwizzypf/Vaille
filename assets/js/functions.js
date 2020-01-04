@@ -21,7 +21,8 @@ function getAllVeille()
         // This function (`page`) will get called for each page of records.
     
         records.forEach(function(record) {
-            var tab = [record.get("Id"), record.get("Subject"), record.get("Synthesis"), record.get("Comment"), record.get("Links")];
+            var tab = [record.get("Id"), record.get("Subject"), 
+            record.get("Synthesis"), record.get("Comment"), record.get("Links"), record.get("Images")];
             tableVeille.push(tab);
         });
     
@@ -39,11 +40,15 @@ function getAllVeille()
 /* function qui remplis les cartes et les affiches*/
 function setVeilleInCard()
 {
+    var img = tableVeille[0][5];
+    console.log(img[0].url)
     for( var i = 0; i < tableVeille.length; i++)
     {
+        var imgUrl = tableVeille[i][5]
         var tmp = cardVeille.replace("###titleVeille###", tableVeille[i][1]);
         tmp = tmp.replace("###id###", tableVeille[i][0]);
         tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
+        tmp = tmp.replace("###linkImage###", imgUrl[0].url);
         $("#list").append(tmp);
     }
 }

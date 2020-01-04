@@ -3,6 +3,12 @@ html
     cursor: progress;
 }
 
+.card {
+	margin: 0 auto; /* Added */
+	float: none; /* Added */
+	margin-bottom: 10px; /* Added */
+}
+
 .simple-pagination ul {
 	margin: 0 0 20px;
 	padding: 0;
