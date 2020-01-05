@@ -1,5 +1,5 @@
 var tableVeille = [];
-var delayInMilliseconds = 2000; //2 second
+var delayInMilliseconds = 5000; //5 second
 
 
 getAllVeille();
