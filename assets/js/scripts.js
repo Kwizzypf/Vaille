@@ -1,5 +1,5 @@
 var tableVeille = [];
-var delayInMilliseconds = 5000; //5 second
+var delayInMilliseconds = 3000; //5 second
 
 
 getAllVeille();
@@ -11,14 +11,16 @@ $(document).ready(function(){
         setVeilleInCard(); 
         $("#loading").hide();
         $("html").css("cursor","default");
+        createPagination();
 
-        setTimeout(function(){
-            createPagination();
-        }, 500);
+        // setTimeout(function(){
+        //     createPagination();
+        // }, 1000);
         
 
     }, delayInMilliseconds);
 })
+
 
 
 

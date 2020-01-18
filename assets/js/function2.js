@@ -1,16 +1,36 @@
-function setStorage(index)
-{
-    localStorage.setItem("index", index);
-}
+var tableVeille = [];
+var delayInMilliseconds = 3000; //5 second
 
+
+getAllVeille();
+
+$("#proute").hide()
+$(document).ready(function(){
+
+    setTimeout(function() {
+        //your code to be executed after 2 second
+        var toto = localStorage.getItem("index");
+        test(toto);
+        $("#loading").hide();
+        $("#proute").show();
+        }, delayInMilliseconds);
+})
+
+function clearStorage()
+{
+    localStorage.clear();
+}
 
 /* function qui insère les données dans le modal */
 function test(index)
 {
     var cpt = index - 1;
+    var imgUrl = tableVeille[cpt][5];
+
     $("#exampleModalLongTitle").html(tableVeille[cpt][1]);
     $("#synthesis").html(tableVeille[cpt][2]);
     $("#comments").html(tableVeille[cpt][3]);
+    $("#img").attr("src",imgUrl[0].url);
     var tabLinks = tableVeille[cpt][4].split("\n\n");
     /*fonction qui va créer plusieur balises a pour générer nos liens de source */
     var links = setLinkInABalise(tabLinks); 
