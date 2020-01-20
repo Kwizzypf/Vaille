@@ -1,6 +1,19 @@
 html
 {
-    cursor: progress;
+	cursor: progress;
+
+}
+
+body
+{
+	background-color: #474040;
+	color: #FFF;
+
+}
+
+.text-white
+{
+	color: #FFF;
 }
 
 .card {
