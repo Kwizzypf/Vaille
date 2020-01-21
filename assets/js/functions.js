@@ -7,7 +7,7 @@ function setStorage(index)
 /* function qui insère les données dans le modal */
 function test(index)
 {
-    var cpt = index - 1;
+    var cpt = index;
     $("#exampleModalLongTitle").html(tableVeille[cpt][1]);
     $("#synthesis").html(tableVeille[cpt][2]);
     $("#comments").html(tableVeille[cpt][3]);
@@ -71,7 +71,8 @@ function setVeilleInCard()
         var tmp = cardVeille.replace("###titleVeille###", tableVeille[i][1]);
         tmp = tmp.replace(/###id###/gi, tableVeille[i][0]);
         tmp = tmp.replace("###idV###", tableVeille[i][6]);
-        tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
+        //tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
+        tmp = tmp.replace("###numberVeille###", i);
         tmp = tmp.replace("###linkImage###", imgUrl[0].url);
         $("#list").append(tmp);
     }
@@ -81,7 +82,7 @@ function createPagination()
 {
     var items = $("#list .items");
             var numItems = items.length;
-            var perPage = 2;
+            var perPage = 3;
 
             items.slice(perPage).hide();
 

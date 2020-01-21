@@ -7,6 +7,7 @@ var delayInMilliseconds = 3000; //5 second
 
 
 getAllVeille();
+console.log(tableVeille);
 
 $(document).ready(function(){
     setTimeout(function() {

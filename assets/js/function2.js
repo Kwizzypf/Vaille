@@ -24,7 +24,7 @@ function clearStorage()
 /* function qui insère les données dans le modal */
 function test(index)
 {
-    var cpt = index - 1;
+    var cpt = index ;
     var imgUrl = tableVeille[cpt][5];
 
     $("#exampleModalLongTitle").html(tableVeille[cpt][1]);
@@ -91,7 +91,8 @@ function setVeilleInCard()
         var tmp = cardVeille.replace("###titleVeille###", tableVeille[i][1]);
         tmp = tmp.replace(/###id###/gi, tableVeille[i][0]);
         tmp = tmp.replace("###idV###", tableVeille[i][6]);
-        tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
+        //tmp = tmp.replace("###numberVeille###", tableVeille[i][0]);
+        tmp = tmp.replace("###numberVeille###",i);
         tmp = tmp.replace("###linkImage###", imgUrl[0].url);
         $("#list").append(tmp);
     }
